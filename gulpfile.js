@@ -20,19 +20,19 @@ var browserSync = require('browser-sync').create();
 // Stylesheet Tasks
 gulp.task('sass-dev', function () {
     return gulp.src([
-        './static/scss/*.scss',
+        './assets/dev/scss/*.scss',
       ])
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./static/css/cache')) 
+      .pipe(gulp.dest('./assets/bin/cache')) 
 });
 
 // Post CSS Task
 gulp.task('post-css',['sass-dev'], function () {
     return gulp.src([
-        './static/css/cache/*.css',
+        './assets/bin/cache/*.css',
       ])
       .pipe(postcss([ autoprefixer() ]))
-      .pipe(gulp.dest('./static/css'))
+      .pipe(gulp.dest('./assets/bin'))
       .pipe(browserSync.stream());      
 });
 
@@ -41,7 +41,7 @@ gulp.task('watch',['post-css'], function () {
     browserSync.init({
         server: "."
     });
-    gulp.watch('./static/scss/**/*.scss', ['post-css']);
+    gulp.watch('./assets/dev/scss/**/*.scss', ['post-css']);
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
