@@ -1,17 +1,27 @@
 // FONTS IMPLEMENTED
-body{
+body {
     font-family: $f-2 !important;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-family: $f-1 !important;
 }
 
-h1{
+h1 {
     font-size: 2.6rem;
     margin: 0;
 }
 
+// LIGHT
+.light {
+    h1 {
+        color: white !important;
+    }
+}
+
 // CUSTOM CLASSES
-.m_toptext{
+.m_toptext {
     font-style: italic;
 }
