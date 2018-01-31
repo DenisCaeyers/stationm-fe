@@ -1,3 +1,14 @@
+// GOOGLE FONT IMPORT
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed');
+
 //FONTS
-$f-1: "DIN 1451 Std Engschrift Regular";
-$f-2: "Eras ITC";
+$f-1: 'Roboto Condensed', sans-serif;
+$f-2: 'Raleway', sans-serif;
+
+//COLORS
+$c-transp: rgba(0,0,0,0);
+$c-white: rgb(255,255,255);
+
+//EASE OF LIFE
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';

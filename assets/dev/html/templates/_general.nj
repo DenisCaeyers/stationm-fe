@@ -7,42 +7,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
         <title>{{ title }}</title>
-    
+
+        <link rel="stylesheet" href="css/reset.css">
+
         <link rel="stylesheet" href="vendor/foundation/css/foundation.css">
         <link rel="stylesheet" href="vendor/foundation/css/app.css">
     
         <link rel="stylesheet" href="css/stationm.css">
     
-    
     </head>
     
     <body id="body {{ body_class }} ">
-    <!-- Facebook SDK -->
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '181783112422043',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.11'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-    <div class="{{ font_scheme }}">
+    
+    {% include 'partials/big-header.html' %}
 
 {% block content %}
 {% endblock %}
@@ -50,25 +27,15 @@
     
         <script src="vendor/foundation/js/vendor/jquery.js"></script>
         <script src="vendor/foundation/js/vendor/what-input.js"></script>
-        <script src="vendor/foundation/js/vendor/foundation.js"></script>
+        <script src="vendor/foundation/js/vendor/foundation.min.js"></script>
         <script src="vendor/foundation/js/app.js"></script>
     
         <script src="js/helper.js"></script>
+
         <script>
-            $(window).resize(function () {
-                resizeContent($);
-                positionNav($);
-            });
-    
-            $(window).load(function () {
-                resizeContent($);
-                positionNav($);
-            });
-    
-            $(document).scroll(function () {
-                positionNav($);
-            });</script>
-    
+            $(document).foundation();
+        </script>
+   
     </body>
     
 </html>

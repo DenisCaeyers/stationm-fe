@@ -1,9 +1,13 @@
 // Variables & Hardcoded values
 @import "variables";
 @import "fonts";
+
 // General Functions
 @import "generals";
+
 // Layouting
 @import "layout";
-// Pages
-@import "login";
+
+// Components
+@import "comp.navigation.scss";
+@import "comp.scrolldown.scss";

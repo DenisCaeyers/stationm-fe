@@ -1,4 +1,4 @@
-*.css
+/assets/bin/css/*.css
 koala-config.json
 
 # OS generated files #

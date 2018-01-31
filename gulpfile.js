@@ -41,7 +41,7 @@ gulp.task('post-css', ['sass-dev'], function () {
 
 // HTML Tasks
 gulp.task('nunjucks', function () {
-    return gulp.src('assets/dev/html/*.html')
+    return gulp.src('assets/dev/html/pages/**/*.+(html|nj)')
         .pipe(render({
             path: ['assets/dev/html/templates']
         }))
@@ -54,7 +54,7 @@ gulp.task('watch', ['post-css', 'nunjucks'], function () {
         server: "."
     });
     gulp.watch('./assets/dev/scss/**/*.scss', ['post-css']);
-    gulp.watch('./assets/dev/html/*.html', ['nunjucks']);
+    gulp.watch('./assets/dev/html/**/*.+(html|nj)', ['nunjucks']);
     gulp.watch("./assets/bin/*.html").on('change', browserSync.reload);
 });
 
